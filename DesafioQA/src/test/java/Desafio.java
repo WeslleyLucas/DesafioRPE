@@ -10,7 +10,7 @@ public class Desafio {
     private WebDriver driver;
     
 	@Dado("que estou na página de login")
-	public void que_estou_na_página_de_login() {
+	public void queEstounaPáginadeLogin() {
 		System.setProperty("webdriver.chrome.driver", "D:\\Weslley Lucas\\Documents\\chromedriver-win64\\chromedriver.exe");
 	    driver = new ChromeDriver();
 		driver.get("http://54.166.20.145:9080/desafioqa");
@@ -18,44 +18,44 @@ public class Desafio {
 	}
 
 	@Quando("eu preencho o campo {string} com usuário não cadastrado")
-	public void eu_preencho_o_campo_com_usuário_não_cadastrado(String string) {
+	public void euPreenchooCampocomUsuárionãoCadastrado(String string) {
 		driver.findElement(By.tagName("input")).sendKeys("joao");
 	}
 	
 	@Quando("preencho o campo {string}")
-	public void preencho_o_campo(String string) {
+	public void preenchoOcampo(String string) {
 	    driver.findElement(By.name("password")).sendKeys("123");
 	}
 
 	@Quando("aperto o botão {string}")
-	public void aperto_o_botão(String string) {
+	public void apertoObotão(String string) {
 	    driver.findElement(By.tagName("button")).click();
 	}
 
 	@Então("deve ser exibida a mensagem {string}")
-	public void deve_ser_exibida_a_mensagem(String string) {
+	public void deveSerexibidaAmensagem(String string) {
 	    	
 	}
 		
 	@Dado("que estou na tela de login")
-	public void que_estou_na_tela_de_login() {
+	public void queEstounaTeladeLogin() {
 		System.setProperty("webdriver.chrome.driver", "D:\\Weslley Lucas\\Documents\\chromedriver-win64\\chromedriver.exe");
 	    driver = new ChromeDriver();
 		driver.get("http://54.166.20.145:9080/desafioqa");
 	}
 
 	@Quando("preencho o campo login com o usuário correto {string}")
-	public void preencho_o_campo_login_com_o_usuário_correto(String string) {
+	public void preenchoOcampoLogincomOusuárioCorreto(String string) {
 		driver.findElement(By.tagName("input")).sendKeys("admin");
 	}
 
 	@Quando("preencho o campo {string} com a senha correta {string}")
-	public void preencho_o_campo_com_a_senha_correta(String string, String string2) {
+	public void preenchoOcampoComaSenhacorreta(String string, String string2) {
 		driver.findElement(By.name("password")).sendKeys("admin");
 	}
 
 	@Então("devo ser direcionado para a tela de início")
-	public void devo_ser_direcionado_para_a_tela_de_início() {
+	public void devoSerdirecionadoParaaTeladeInício() {
 	    
 	}
 
